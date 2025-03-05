@@ -11,8 +11,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', ' JarvisBot')
-API_ID = int(environ.get('API_ID', '28880293'))
-API_HASH = environ.get('API_HASH', 'd6ea1280f2dd3c8703d8c001389ca630')
+API_ID = int(environ.get('API_ID', '29559156'))
+API_HASH = environ.get('API_HASH', 'b9f4d4dddb22e55e4d79d61d6b2567ea')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
@@ -26,7 +26,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '--1001368861744'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001368861744'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002465906490').split()]  # For Multiple Id Use One Space Between Each.
