@@ -10,7 +10,7 @@ from Script import script
 id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
-SESSION = environ.get('SESSION', ' JarvisBot')
+SESSION = environ.get('SESSION', 'JarvisBot')
 API_ID = int(environ.get('API_ID', '29559156'))
 API_HASH = environ.get('API_HASH', 'b9f4d4dddb22e55e4d79d61d6b2567ea')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -22,7 +22,7 @@ PICS = (environ.get('PICS', 'https://iili.io/2Q0jCc7.jpg')).split()
 
 # Admins & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '916045958').split()] # For Multiple Id Use One Space Between Each.
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6188248890').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
@@ -41,7 +41,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002492948611') # give your force s
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # This Channel Is For When User Request Any File Name With command or hashtag like - /request or #request
-reqst_channel = environ.get('REQST_CHANNEL', '-1002401713526')
+reqst_channel = environ.get('REQST_CHANNEL', '-1002408635413')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # This Channel Is For Index Request 
